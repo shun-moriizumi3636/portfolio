@@ -1,0 +1,199 @@
+/* 
+ * 全ての要素から余白を取り除き、
+ * ボックスのサイズ指定を簡単にする
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * リンクの下線を表示しない
+ */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #333333;
+  text-decoration: none;
+}
+
+/*
+ * フロートを解除するために使用する
+ */
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.clearfix:before {
+  clear: both;
+  content: "";
+  display: block;
+}
+.clearfix {
+  display: block;
+}
+
+/*
+ * ページ全体の設定
+ */
+body {
+  /* 背景と文字のコントラストを押さえる */
+  background-color: #fefefe;
+  color: #333333;
+}
+
+/*
+ * ヘッダー
+ */
+
+header {
+  background-color: lightgray;
+  margin: 0 auto;
+  width: 100%;
+}
+
+header h1 {
+  margin-left: 3rem;
+}
+
+header ul {
+  font-size: 0;
+}
+
+header ul li {
+  background-color: lightslategray;
+  display: inline-block;
+  font-size: 1rem;
+  list-style: none;
+  text-align: center;
+  width: 25%;
+}
+
+/*
+ * メイン
+ */
+
+.wrapper {
+  margin: 0 auto;
+  min-height: 800px;
+  /* max-width: 1024px; */
+}
+
+/*
+ * サイドメニュー
+ */
+
+#categories {
+  background-color: lightgray;
+  float: left;
+  margin-top: 3rem;
+  width: 25%;
+}
+
+#categories li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  text-align: center;
+}
+#categories li ul {
+  background-color: whitesmoke;
+}
+
+/*
+ * 商品一覧
+ */
+
+#items {
+  float: right;
+  /* margin-top: 1rem; */
+  width: 765px;
+}
+
+#items h2 {
+  height: 3rem; /* サイドメニュー(#categories)の上余白と揃える */
+  line-height: 3rem; /* テキストを上下中央に揃えるため行間を調整 */
+  text-align: center;
+}
+
+#items ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* 商品一覧の最下段が2つのときに左寄するための詰め物 */
+#items ul::after {
+  content: "";
+  display: block;
+  width: 30%;
+}
+
+#items li {
+  display: block;
+  list-style: none;
+  margin-bottom: 1rem;
+  width: 30%;
+}
+
+#items li a {
+  display: block;
+}
+
+#items section {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+#items li img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#items li h3 {
+  text-align: left;
+}
+
+/*
+ * 商品詳細
+ */
+
+#item {
+  float: left;
+  margin-top: 3rem; /* サイドメニュー(#categories)の上余白と揃える */
+  width: 765px;
+}
+
+#item #mainImage {
+  float: left;
+  height: 300px;
+  width: 300px;
+}
+
+#item #info {
+  float: right;
+  width: 450px;
+}
+
+#item #description {
+  float: left;
+  width: 450px;
+}
+
+/*
+ * フッター
+ */
+
+footer {
+  background-color: lightgray;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}

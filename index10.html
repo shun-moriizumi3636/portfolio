@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>通販サイト</title>
+    <style>
+      .accordion input[type="checkbox"] {
+        /* チェックボックスを非表示にする */
+        display: none;
+      }
+      .accordion ~ ul {
+        /* チェックされていないチェックボックスの弟要素のulを非表示にする */
+        display: none;
+      }
+      .accordion:has(input:checked) ~ ul {
+        /* チェックされているチェックボックスの弟要素のulを非表示にする */
+        display: block;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <strong style="font: size 120pt; color: aquamarine">PIG KAMERA</strong>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <strong style="font: size 120pt; color: aquamarine"
+              >商品一覧</strong
+            >
+          </li>
+          <li><a href="index1.html">ホーム</a></li>
+          <li><a href="index3.html">お問い合わせ</a></li>
+          <li><a href="index4.html">カート</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper clearfix">
+      <nav id="categories">
+        <ul>
+          <li>
+            <label class="accordion">
+              <input type="checkbox" />
+              <h3>食料品関係</h3>
+            </label>
+            <ul>
+              <li><a href="index6.html">炊飯器</a></li>
+              <li><a href="index7.html">冷蔵庫</a></li>
+              <li><a href="index8.html">電子レンジ</a></li>
+            </ul>
+          </li>
+          <ul>
+            <li>
+              <label class="accordion">
+                <input type="checkbox" />
+                <h3>洗濯・掃除関係</h3>
+              </label>
+              <ul>
+                <li><a href="index9.html">掃除機</a></li>
+                <li><a href="index10.html">洗濯機</a></li>
+                <li><a href="index11.html">食洗器</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <label class="accordion">
+                <input type="checkbox" />
+                <h3>情報関係</h3>
+              </label>
+              <ul>
+                <li><a href="index12.html">テレビ</a></li>
+                <li><a href="index13.html">パソコン</a></li>
+                <li><a href="index14.html">スマートフォン</a></li>
+              </ul>
+            </li>
+          </ul>
+        </ul>
+      </nav>
+      <main id="item">
+        <section>
+          <img
+            id="mainImage"
+            src="https://japaclip.com/images/thumb/washing-machine-front-loading.png"
+            alt="商品画像"
+          />
+          <section id="info">
+            <h2>洗濯機</h2>
+            <h3>～洗濯物を一気に洗浄～</h3>
+            <p>NISISIBA PUREZENTS</p>
+            <p>￥79,800</p>
+            <button>カートに入れる</button>
+          </section>
+          <section id="description">
+            <p>最大7日分の洗濯物を選択可能！</p>
+            <p>高圧ジェット噴射で油汚れを確実に落とします！</p>
+            <p>しかも乾燥機能付き！</p>
+          </section>
+        </section>
+      </main>
+    </div>
+    <!-- .wrapper -->
+    <footer>
+      <p>&copy; 2023 PIG KAMERA.</p>
+    </footer>
+  </body>
+</html>
